@@ -25,19 +25,22 @@ const RecipeView = props => {
   )
 
   return (
-    <div className='recipe-view-page'>
-      <div className='heading'>
-        <p>{recipe.title}</p>
-        <p>{recipe.description}</p>
+    <div className='RecipeViewPage'>
+      <div className='Heading'>
+        <p className='Title'>{recipe.title}</p>
+        <p className='Description'>{recipe.description}</p>
       </div>
-      <img src={env + recipe.images?.medium} alt={recipe.title}/>
-      <div className='misc-details'>
-        <p>Servings: {recipe.servings}</p>
-        <p>Prep: {recipe.prepTime} mins</p>
-        <p>Cook: {recipe.cookTime} mins</p>
+      <div className='ImageSection'>
+        <img className='ImageMedium' src={env + recipe.images?.medium} alt={recipe.title}/>
+        <img className='ImageFull' src={env + recipe.images?.full} alt={recipe.title}/>
+        <div className='MiscDetails'>
+          <p>Servings: {recipe.servings}</p>
+          <p>Prep: {recipe.prepTime} mins</p>
+          <p>Cook: {recipe.cookTime} mins</p>
+        </div>
       </div>
-      <div className='ingredients-section'>
-        <p>Ingredients:</p>
+      <div className='IngredientsSection'>
+        <p className='Header'>Ingredients:</p>
         <ul>
         {recipe.ingredients?.map(ingredient => {
           const ingredientSpecial = specials.find((special) => {
@@ -50,22 +53,22 @@ const RecipeView = props => {
           return (
             <li key={ingredient.uuid}>
               {ingredient.amount} {ingredient.measurement} {ingredient.name}
-              <br/>{specialLiteral}
+              <br/><div className='Special'><i>{specialLiteral}</i></div>
             </li>
           );
         })}
         </ul>
       </div>
-      <div className='directions-section'>
-        <p>Directions:</p>
+      <div className='DirectionsSection'>
+        <p className='Header'>Directions:</p>
         <ul>
         {recipe.directions?.map((direction, index) => {
           const stepNo = index + 1;
           const optionalLiteral = direction.optional ? ' (Optional)' : '';
           return (
             <li key={stepNo}>
-              Step {stepNo}{optionalLiteral}: 
-              <br/>{direction.instructions}
+              <b>Step {stepNo}</b><i>{optionalLiteral}</i>: 
+              <br/><div className='Instruction'>{direction.instructions}</div>
             </li>
           );
         })}

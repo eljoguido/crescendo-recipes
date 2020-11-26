@@ -1,15 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Quicksand&family=Raleway:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 p {
-  font-size: 1.7rem;
+  font-size: 2.5vh;
 }
 
 li {
-  font-size: 1.7rem;
+  font-size: 2.5vh;
 }
 
-/* @media screen and (min-width: 768px) {
-  .recipe-view-page {
+.RecipeViewPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%
+}
+
+.Heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-bottom: 5vh;
+}
+
+.Heading .Title {
+  font-family: 'Merienda One', cursive;
+  font-size: 3.5rem;
+}
+
+.Heading .Description {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2rem;
+  margin-top: 5vh;
+}
+
+.ImageSection {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.ImageFull {
+  display: none;
+}
+
+.MiscDetails {
+  border-radius: 20px;
+  border: 5px solid #acacac;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 20vh;
+  align-self: flex-start;
+  margin: 5vh 0 5vh 0;
+}
+
+.MiscDetails p {
+  font-family: 'Raleway', sans-serif;
+}
+
+.IngredientsSection .Header {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 4vh;
+  margin-bottom: 2vh;
+}
+
+.IngredientsSection ul {
+  padding-left: 10%;
+}
+
+.IngredientsSection li {
+  font-family: 'Raleway', sans-serif;
+  margin: 1.5vh 0 1.5vh 0;
+}
+
+.IngredientsSection .Special {
+  font-size: 1.8vh;
+  margin-top: 1vh;
+}
+
+.IngredientsSection {
+  margin-bottom: 5vh;
+}
+
+.DirectionsSection .Header {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 4vh;
+  margin-bottom: 2vh;
+}
+
+.DirectionsSection ul {
+  padding-left: 5%;
+}
+
+.DirectionsSection li {
+  list-style: none;
+  font-family: 'Raleway', sans-serif;
+  margin: 1.5vh 0 1.5vh 0;
+}
+
+.DirectionsSection .Instruction {
+  margin-top: 1.5vh;
+  padding-left: 5%;
+}
+
+
+@media screen and (min-width: 768px) {
+  .RecipeViewPage {
+    display: block;
+    padding-left: 20vw;
+    padding-right: 10vw;
+  }
+
+  .ImageMedium {
     display: none;
   }
-} */
+
+  .ImageFull {
+    display: block;
+    width: 55vw;
+    margin-right: 3vw;
+  }
+
+  .MiscDetails {
+    padding: 0 1% 0 1%;
+    margin: 5vh 0 5vh 0;
+  }
+  
+  .Heading .Title {
+    font-size: 5rem;
+  }
+  
+  .Heading .Description {
+    font-size: 2.5rem;
+    margin-top: 5vh;
+  }
+
+  .IngredientsSection ul {
+    padding-left: 5%;
+  }
+
+  .DirectionsSection ul {
+    padding-left: 3%;
+  }  
+
+  .DirectionsSection .Instruction {
+    padding-left: 3%;
+  }
+}
