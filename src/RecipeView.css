@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+
+p {
+  font-size: 1.7rem;
+}
+
+li {
+  font-size: 1.7rem;
+}
+
+/* @media screen and (min-width: 768px) {
+  .recipe-view-page {
+    display: none;
+  }
+} */
