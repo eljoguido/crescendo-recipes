@@ -1,4 +1,4 @@
-import './App.css';
+import './RecipeList.css';
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -20,21 +20,26 @@ const RecipeList = props => {
     }, []
   )
 
+  const listItemClasses = `RecipeListItem Grow`;
+
   return (
-    <ul>
+    <div className='RecipeListPage'>
+      <ul>
       {recipes.map(recipe => {
         return (
           <li key={recipe.uuid}>
             <Link to={'/view/' + recipe.uuid}>
-              <div className='recipe-list-item'>
+              <div className={listItemClasses}>
+                <p className='Title'>{recipe.title}</p>
+                <p className='Description'>{recipe.description}</p>
                 <img src={env + recipe.images.medium} alt={recipe.title}/>
-                <h2>{recipe.title}</h2>
               </div>
             </Link>
           </li>
         );
       })}
     </ul>
+    </div>
   )
 }
 

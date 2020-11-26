@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Quicksand&family=Raleway:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.RecipeListPage {
+  margin-top: 15vh;
+  padding: 10%;
+  padding-top: 5vh;
+}
+
+.RecipeListPage ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.RecipeListPage li {
+  font-size: 2.5vh;
+  list-style: none;
+}
+
+.RecipeListPage p {
+  font-size: 2.5vh;
+  color: black;
+}
+
+.RecipeListItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 7%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 3px solid #acacac;
+  height: 100%;
+}
+
+.RecipeListItem .Title {
+  font-family: 'Merienda One', cursive;
+  font-size: 2rem;
+}
+
+.RecipeListItem .Description {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+  margin: 1vh 0 1vh 0;
+}
+
+.Grow { 
+  transition: all .3s ease-in-out; 
+}
+
+.Grow:hover { 
+  transform: scale(1.1); 
+}
